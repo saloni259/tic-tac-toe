@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <style>
+        * {
+          padding: 0;
+          margin: 0;  
+        }
+        body{
+            background-image: url(https://static.vecteezy.com/system/resources/previews/036/148/934/non_2x/ai-generated-butterfly-on-blooming-flowers-with-a-blurred-bokeh-background-rainbow-pastel-colors-banner-with-copy-space-ideal-for-presentations-articles-websites-related-to-nature-design-photo.jpeg);
+            background-color: rgb(169, 109, 209);
+             text-align: center;
+             justify-content: center;
+            align-content: center;
+        }
+        .h1{
+          line-height: 100rem;
+        }
+        .game-container{
+             justify-content: center;
+            align-content: center;
+            height: 70vh;
+            display: flex;
+            background-color: transparent;
+            margin-top: 6rem;
+        }
+        .game{
+            display: flex;
+            height: 60vmin;
+            width: 60vmin;
+           justify-content: center;
+            align-content: center;
+            flex-wrap:wrap;
+            gap: 1.5vmin;
+        }
+        .box{
+            height: 18vmin;
+            width: 18vmin;
+            background-color: transparent;
+           border-color: blueviolet;
+           border-radius: 10rem;
+           cursor: pointer;
+           box-shadow: 2px 2px 2px rgba(0,0,0,1);
+           transform: background-color 0.5s;
+           color: skyblue;
+           font-size: 70px;
+           font-weight: bold;
+        }
+        .box:hover{
+            background-color: pink;
+        }
+        .reset{
+            height: 30px;
+            width: 100px;
+            border: none;
+            border-radius: 15px;
+            color:black;
+            font-weight: 400px;
+            background-color: aqua;
+            cursor: pointer;
+            box-shadow: 2px 2px 2px rgba(0,0,0,1);
+            transform: background-color 0.5s;
+        }
+        .reset:hover{
+            background-color: pink;
+        }
+        .win-container{
+            height: 5vh;
+            display: none;
+        }
+        .win-msg{
+            line-height: 30px;
+            font-weight: 700px;
+            font-style: italic;
+            font-size: 25px;
+        }
+        .new-button{
+           padding: 5px;
+           height: 30px;
+            width: 100px;
+            border: none;
+            border-radius: 15px;
+            color:black;
+            font-weight: 400px;
+            background-color: aqua;
+            cursor: pointer;
+            box-shadow: 2px 2px 2px rgba(0,0,0,1);
+            transform: background-color 0.5s;
+        }
+        .new-button:hover{
+            background-color: pink;
+        }
+        .show{
+            display: block;
+        }
+        html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 500px) {
+          .box {
+            height: 25vmin;
+            width: 25vmin;
+            font-size: 40px;
+          }
+
+          .win-msg {
+            font-size: 18px;
+          }
+        }
+    </style>
+</head>
+<body>
+    <div>
+       
+        <main>
+       <h1 class="name">TIC TAC TOE</h1>
+        <div class="win-container">
+            <p class="win-msg">Congratulations! Y won the game..</p>
+            <button class="new-button">New game</button>
+        </div>
+       <div class="game-container">
+        <div class="game">
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+        </div>
+        </div>
+        <div class="reset-button">
+            <button class="reset">Reset game</button>
+        </div>
+        </main>
+    </div>
+    <script src="tictac.js"></script>
+</body>
+</html>
